@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Ubuntu|Roboto:400,700);
+
+body{
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar-brand{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 70;
+  font-size: 2em;
+}
+.my-name{
+font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+  font-weight: 400;
+  font-size: 55px;
+}
+hr {
+   width: 50%;
+}
+#designation{
+font-size: 50px;
+font-family: "Dancing Script", cursive;
+ font-weight: 600;
+}
+#github{
+  color: white;
+}
+#facebook{
+  color: white;
+}
+  #linkedin{
+ color: white;   
+  }
+
+#home{
+  background-image: url("https://images.unsplash.com/photo-1460794418188-1bb7dba2720d?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925");
+    background-attachment: fixed;
+  
+  background-size: cover;
+    background-position: center;
+
+  height: 100%;
+  margin-top: -20px;
+  padding-top: 400px;
+  padding-bottom: 350px;
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.5),
+               0px 18px 23px rgba(0,0,0,0.1);
+}
+#sec-heading{
+ font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+font-size: 45px;
+  font-weight:700;
+  margin-top: 55px;
+}
+
+#portfolio{
+  background-image: url("https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925");
+      background-attachment: fixed;
+
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+.thumbnail{
+  position: relative;
+ 
+}
+
+  .thumbnail img{
+   min-height: 150px;
+   min-width: 200px;
+  
+     }
+#about{
+  background-image: url(
+"https://images.unsplash.com/photo-1414690165279-49ab0a9a7e66?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925");
+    background-attachment: fixed;
+
+  color: #fff;
+}
+#abouttext{
+  font-family:"Ubuntu", sans-serif;
+ font-size: 24px;
+  color:#fff
+}
+#my-pic{
+  height: 250px;
+  width: 250px;
+}
+#contact{
+  background-image: url("https://images.unsplash.com/photo-1429051883746-afd9d56fbdaf?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925");
+    background-attachment: fixed;
+  
+  background-size: cover;
+    background-position: center;
+
+  color: #fff;
+}
+#ter-heading{
+font-size: 35px;
+  font-weight:700;
+  margin-top: 55px;
+}

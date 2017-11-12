@@ -41,7 +41,7 @@ hr{
 }
 
 #home{
-  background-image: url('/Images/1.jpg');
+  background-image: url('Images/1.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -57,7 +57,7 @@ hr{
                0px 18px 23px rgba(0,0,0,0.1);
 }
 #portfolio{
-  background-image: url(file:///Users/Tanmay/Desktop/myPortfolio/portfolio/Images/2.jpeg);
+  background-image: url('Images/2.jpeg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -65,12 +65,12 @@ hr{
   color: #fff;
 }
 #about{
-  background-image: url('../Images/3.jpeg');
+  background-image: url('Images/3.jpeg');
   background-attachment: fixed;
   color: #fff;
 }
 #contact{
-  background-image: url('../Images/4.jpg');
+  background-image: url('Images/4.jpg');
   background-attachment: fixed;
   height: 100%;
   background-size: cover;

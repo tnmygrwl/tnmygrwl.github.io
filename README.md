@@ -1,4 +1,4 @@
-# This is my digital portfolio:
+# This is my digital portfolio: (Deprecated) 
 
 Contributing to this page:
 Performance enhancements are welcome. 

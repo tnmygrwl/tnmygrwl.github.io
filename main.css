@@ -13,9 +13,9 @@ hr{
   font-size: 2em;
 }
 .my-name{
-  font-family: Copperplate,"Copperplate Gothic Light",fantasy;
-  font-weight: 400;
-  font-size: 55px;
+  font-family: "Courier New",cursive;
+  font-weight: 500;
+  font-size: 75px;
 }
 .thumbnail{
   position: relative; 
@@ -26,9 +26,9 @@ hr{
 }
 
 #designation{
-  font-size: 50px;
-  font-family: "Dancing Script", cursive;
-  font-weight: 600;
+  font-size: 40px;
+  font-family: "Courier New", cursive;
+  font-weight: 450;
 }
 #github{
   color: white;
@@ -45,13 +45,12 @@ hr{
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  margin-right: -20px;
-  margin-left: -20px;
+  
 }
 #home_title{
 height: 100%;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 350px;
   color: #fff;
   font-size: 3em;
@@ -68,7 +67,8 @@ height: 100%;
   color: #fff;
 }
 #about{
-  background-image: url('Images/3.jpeg');
+  /*background-image: url('Images/3.jpeg');*/
+  background-color: #222;
   background-attachment: fixed;
   color: #fff;
 }
@@ -82,7 +82,7 @@ height: 100%;
 }
 
 #sec-heading{
-  font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+  font-family: "Courier New",fantasy;
   font-size: 45px;
   font-weight:700;
   margin-top: 55px;

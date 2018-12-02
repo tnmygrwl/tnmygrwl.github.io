@@ -1,5 +1,6 @@
-# This is my digital portfolio: (Deprecated) 
+## TODO:
+- [ ] Clean up the code.
+- [ ] Improve readability.
+- [ ] Performance Enhancements (Load time).
 
-Contributing to this page:
-Performance enhancements are welcome. 
-The website can be found here: https://tanmay7270.github.io/portfolio/
+The website can be found here: https://tanmay7270.github.io/Personal_Website/

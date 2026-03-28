@@ -77,8 +77,8 @@
         <span class="builtin">super</span>().<span class="fn">__init__</span>(<span class="param">config</span>)
         <span class="param">self</span>.backbone <span class="op">=</span> nn.Identity()  <span class="cm"># still figuring this out</span>
 
-    <span class="kw">def</span> <span class="fn">forward</span>(<span class="param">self</span>, <span class="param">coffee</span>, <span class="param">curiosity</span>):
-        <span class="kw">return</span> <span class="param">self</span>.backbone(<span class="param">coffee</span> <span class="op">+</span> <span class="param">curiosity</span>)</code></pre></div>
+    <span class="kw">def</span> <span class="fn">forward</span>(<span class="param">self</span>, <span class="param">x</span>):
+        <span class="kw">return</span> <span class="param">self</span>.backbone(<span class="param">x</span>)</code></pre></div>
             </div>
 
             <!-- links.py tab -->

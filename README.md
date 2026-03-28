@@ -1,6 +1,5 @@
-## TODO:
-- [ ] Clean up the code.
-- [ ] Improve readability.
-- [ ] Performance Enhancements (Load time).
+# tanmayagrawal.com
 
-The website can be found here: https://tanmay7270.github.io/Personal_Website/
+Personal website styled as a VS Code editor window, with a HuggingFace Transformers model definition as the bio.
+
+Static HTML + CSS, no frameworks. Hosted on GitHub Pages.

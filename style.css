@@ -167,18 +167,12 @@ html, body {
   min-width: 0;
 }
 
-.code-area pre {
+.code-pre {
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--text-primary);
-  white-space: pre;
-}
-
-.code-area code {
-  font-family: inherit;
-  font-size: inherit;
 }
 
 /* Syntax highlighting */
@@ -191,6 +185,33 @@ html, body {
 .param { color: var(--param); }
 .builtin { color: var(--builtin); }
 .num { color: #b5cea8; }
+
+/* Code lines — blame on hover/active */
+.code-line {
+  display: block;
+  white-space: pre;
+  position: relative;
+}
+
+.code-line[data-blame]:hover,
+.code-line.active {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.code-line[data-blame]:hover::after,
+.code-line.active::after {
+  content: "    " attr(data-blame);
+  color: #6e7681;
+  font-style: italic;
+  font-size: 0.82em;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.code-line.active::after {
+  color: #858585;
+  opacity: 1;
+}
 
 /* Links styled as strings */
 .code-area a {

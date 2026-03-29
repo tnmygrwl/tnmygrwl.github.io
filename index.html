@@ -42,55 +42,57 @@
         <div class="editor-body">
             <!-- human.py tab -->
             <div class="tab-content active" id="tab-human">
-                <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span><span>35</span></div>
-                <div class="code-area"><pre><code><span class="kw">from</span> transformers <span class="kw">import</span> <span class="cls">PreTrainedModel</span>, <span class="cls">PretrainedConfig</span>
-
-
-<span class="kw">class</span> <span class="cls">HumanConfig</span>(<span class="cls">PretrainedConfig</span>):
-    model_type <span class="op">=</span> <span class="str">"human"</span>
-
-    <span class="kw">def</span> <span class="fn">__init__</span>(
-        <span class="param">self</span>,
-        <span class="param">name</span><span class="op">=</span><span class="str">"tanmay agrawal"</span>,
-        <span class="param">education</span><span class="op">=</span>[<span class="str">"umass amherst"</span>, <span class="str">"uc berkeley"</span>, <span class="str">"srm chennai"</span>],
-        <span class="param">roles</span><span class="op">=</span>[<span class="str">"ai engineer"</span>, <span class="str">"researcher"</span>],
-        <span class="param">interests</span><span class="op">=</span>[<span class="str">"brewing coffee"</span>, <span class="str">"armchair philosophy"</span>, <span class="str">"epistemology"</span>],
-        <span class="param">languages</span><span class="op">=</span>[<span class="str">"english"</span>, <span class="str">"hindi"</span>, <span class="str">"urdu"</span>],
-        <span class="param">lived_in</span><span class="op">=</span>[<span class="str">"amherst"</span>, <span class="str">"indore"</span>, <span class="str">"chennai"</span>, <span class="str">"berkeley"</span>, <span class="str">"san jose"</span>, <span class="str">"singapore"</span>],
-        <span class="param">topics</span><span class="op">=</span>[<span class="str">"computer science"</span>, <span class="str">"computer vision"</span>, <span class="str">"ai safety"</span>],
-        <span class="op">**</span><span class="param">kwargs</span>,
-    ):
-        <span class="builtin">super</span>().<span class="fn">__init__</span>(<span class="op">**</span><span class="param">kwargs</span>)
-        <span class="param">self</span>.name <span class="op">=</span> name
-        <span class="param">self</span>.education <span class="op">=</span> education
-        <span class="param">self</span>.roles <span class="op">=</span> roles
-        <span class="param">self</span>.interests <span class="op">=</span> interests
-        <span class="param">self</span>.languages <span class="op">=</span> languages
-        <span class="param">self</span>.lived_in <span class="op">=</span> lived_in
-        <span class="param">self</span>.topics <span class="op">=</span> topics
-
-
-<span class="kw">class</span> <span class="cls">Human</span>(<span class="cls">PreTrainedModel</span>):
-    config_class <span class="op">=</span> <span class="cls">HumanConfig</span>
-
-    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="param">self</span>, <span class="param">config</span>):
-        <span class="builtin">super</span>().<span class="fn">__init__</span>(<span class="param">config</span>)
-        <span class="param">self</span>.backbone <span class="op">=</span> nn.Identity()  <span class="cm"># still figuring this out</span>
-
-    <span class="kw">def</span> <span class="fn">forward</span>(<span class="param">self</span>, <span class="param">x</span>):
-        <span class="kw">return</span> <span class="param">self</span>.backbone(<span class="param">x</span>)</code></pre></div>
+                <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span></div>
+                <div class="code-area"><div class="code-pre">
+<div class="code-line" data-blame="tanmay agrawal  ·  Sep 2023  ·  switched from nn.Module"><span class="kw">from</span> transformers <span class="kw">import</span> <span class="cls">PreTrainedModel</span>, <span class="cls">PretrainedConfig</span></div>
+<div class="code-line"> </div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  initial commit"><span class="kw">class</span> <span class="cls">HumanConfig</span>(<span class="cls">PretrainedConfig</span>):</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  hardcoded">    model_type <span class="op">=</span> <span class="str">"human"</span></div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  constructor">    <span class="kw">def</span> <span class="fn">__init__</span>(</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  always self">        <span class="param">self</span>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  🎂">        <span class="param">name</span><span class="op">=</span><span class="str">"tanmay agrawal"</span>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  May 2022  ·  hard won">        <span class="param">education</span><span class="op">=</span>[<span class="str">"umass amherst"</span>, <span class="str">"uc berkeley"</span>, <span class="str">"srm chennai"</span>],</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Jun 2023  ·  updated">        <span class="param">roles</span><span class="op">=</span>[<span class="str">"ai engineer"</span>, <span class="str">"researcher"</span>],</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Mar 2026  ·  updated">        <span class="param">interests</span><span class="op">=</span>[<span class="str">"visual intelligence"</span>, <span class="str">"armchair philosophy"</span>, <span class="str">"epistemology"</span>],</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  multilingual">        <span class="param">languages</span><span class="op">=</span>[<span class="str">"english"</span>, <span class="str">"hindi/urdu"</span>],</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Jan 2025  ·  added sf">        <span class="param">lived_in</span><span class="op">=</span>[<span class="str">"sf"</span>, <span class="str">"amherst"</span>, <span class="str">"indore"</span>, <span class="str">"chennai"</span>, <span class="str">"berkeley"</span>, <span class="str">"singapore"</span>],</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  extensible by design">        <span class="op">**</span><span class="param">kwargs</span>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  closed">    ):</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  don't forget super">        <span class="builtin">super</span>().<span class="fn">__init__</span>(<span class="op">**</span><span class="param">kwargs</span>)</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  named">        <span class="param">self</span>.name <span class="op">=</span> name</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  May 2022  ·  hard won">        <span class="param">self</span>.education <span class="op">=</span> education</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Jun 2023  ·  updated">        <span class="param">self</span>.roles <span class="op">=</span> roles</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Mar 2026  ·  updated">        <span class="param">self</span>.interests <span class="op">=</span> interests</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  multilingual">        <span class="param">self</span>.languages <span class="op">=</span> languages</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Jan 2025  ·  added sf">        <span class="param">self</span>.lived_in <span class="op">=</span> lived_in</div>
+<div class="code-line"> </div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  the main class"><span class="kw">class</span> <span class="cls">Human</span>(<span class="cls">PreTrainedModel</span>):</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  linked">    config_class <span class="op">=</span> <span class="cls">HumanConfig</span></div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  init">    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="param">self</span>, <span class="param">config</span>):</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  always">        <span class="builtin">super</span>().<span class="fn">__init__</span>(<span class="param">config</span>)</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Mar 2026  ·  still TODO">        <span class="param">self</span>.backbone <span class="op">=</span> nn.Identity()  <span class="cm"># still figuring this out</span></div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  main event">    <span class="kw">def</span> <span class="fn">forward</span>(<span class="param">self</span>, <span class="param">x</span>):</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  pass-through for now">        <span class="kw">return</span> <span class="param">self</span>.backbone(<span class="param">x</span>)</div>
+</div></div>
             </div>
 
             <!-- links.py tab -->
             <div class="tab-content" id="tab-links">
                 <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
-                <div class="code-area"><pre><code><span class="cm"># where to find me</span>
-
-links <span class="op">=</span> {
-    <span class="str">"github"</span>: <span class="str">"<a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github.com/tnmygrwl</a>"</span>,
-    <span class="str">"linkedin"</span>: <span class="str">"<a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin.com/in/tnmygrwl</a>"</span>,
-    <span class="str">"email"</span>: <a class="email-link" href="#"><span class="str">""</span>.<span class="fn">join</span>([<span class="str">"hey"</span>, <span class="builtin">chr</span>(<span class="num">64</span>), <span class="str">"tnmygrwl.com"</span>])</a>,
-}</code></pre></div>
+                <div class="code-area"><div class="code-pre">
+<div class="code-line" data-blame="tanmay agrawal  ·  Mar 2026  ·  updated"><span class="cm"># where to find me</span></div>
+<div class="code-line"> </div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  dict of dicts">links <span class="op">=</span> {</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Dec 2018  ·  first commit">    <span class="str">"github"</span>: <span class="str">"<a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github.com/tnmygrwl</a>"</span>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Jan 2019  ·  first job">    <span class="str">"linkedin"</span>: <span class="str">"<a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin.com/in/tnmygrwl</a>"</span>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Mar 2026  ·  updated">    <span class="str">"email"</span>: <a class="email-link" href="#"><span class="str">""</span>.<span class="fn">join</span>([<span class="str">"hey"</span>, <span class="builtin">chr</span>(<span class="num">64</span>), <span class="str">"tnmygrwl.com"</span>])</a>,</div>
+<div class="code-line" data-blame="tanmay agrawal  ·  Aug 7, 1998  ·  closed">}</div>
+</div></div>
             </div>
         </div>
 
@@ -116,7 +118,7 @@ links <span class="op">=</span> {
         <!-- Status bar -->
         <div class="statusbar">
             <div class="statusbar-left">
-                <span>Ln 1, Col 1</span>
+                <span id="status-cursor">Ln 1, Col 1</span>
             </div>
             <div class="statusbar-right">
                 <span>UTF-8</span>
@@ -131,20 +133,41 @@ links <span class="op">=</span> {
         var tabs = document.querySelectorAll('.tab-btn');
         var contents = document.querySelectorAll('.tab-content');
         var titleText = document.getElementById('titlebar-filename');
+        var statusCursor = document.getElementById('status-cursor');
         var filenames = { human: 'human.py', links: 'links.py' };
 
+        // tab switching
         tabs.forEach(function(tab) {
             tab.addEventListener('click', function() {
-                var clicked = this;
-                var target = clicked.getAttribute('data-tab');
-
+                var target = this.getAttribute('data-tab');
                 tabs.forEach(function(t) { t.classList.remove('active'); });
                 contents.forEach(function(c) { c.classList.remove('active'); });
-
-                clicked.classList.add('active');
+                this.classList.add('active');
                 document.getElementById('tab-' + target).classList.add('active');
                 titleText.textContent = 'tanmay agrawal - ' + filenames[target];
             });
+        });
+
+        // blame: click to pin, click again or click elsewhere to unpin
+        document.querySelectorAll('.code-line[data-blame]').forEach(function(line, i) {
+            line.addEventListener('click', function(e) {
+                var wasActive = this.classList.contains('active');
+                document.querySelectorAll('.code-line').forEach(function(l) { l.classList.remove('active'); });
+                if (!wasActive) {
+                    this.classList.add('active');
+                    // find line number by counting preceding siblings
+                    var ln = Array.from(this.parentNode.children).indexOf(this) + 1;
+                    statusCursor.textContent = 'Ln ' + ln + ', Col 1';
+                } else {
+                    statusCursor.textContent = 'Ln 1, Col 1';
+                }
+                e.stopPropagation();
+            });
+        });
+
+        document.querySelector('.editor-body').addEventListener('click', function() {
+            document.querySelectorAll('.code-line').forEach(function(l) { l.classList.remove('active'); });
+            statusCursor.textContent = 'Ln 1, Col 1';
         });
 
         // construct email at runtime — no mailto: in source for crawlers

@@ -31,19 +31,60 @@
         <!-- Tabs -->
         <div class="tabs">
             <button class="tab-btn active" data-tab="human">
-                <span class="icon">PY</span> human.py
+                <span class="icon">PY</span> human.py<span class="tab-close">&times;</span>
             </button>
             <button class="tab-btn" data-tab="links">
-                <span class="icon">PY</span> links.py
+                <span class="icon">PY</span> links.py<span class="tab-close">&times;</span>
             </button>
         </div>
 
-        <!-- Editor body -->
-        <div class="editor-body">
-            <!-- human.py tab -->
-            <div class="tab-content active" id="tab-human">
-                <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span></div>
-                <div class="code-area"><div class="code-pre">
+        <!-- Breadcrumb bar -->
+        <div class="breadcrumb" id="breadcrumb">
+            <span class="breadcrumb-segment">src</span>
+            <span class="breadcrumb-sep">&gt;</span>
+            <span class="breadcrumb-segment">models</span>
+            <span class="breadcrumb-sep">&gt;</span>
+            <span class="breadcrumb-segment breadcrumb-file" id="breadcrumb-file">human.py</span>
+        </div>
+
+        <!-- Middle row: activity bar + editor body + minimap -->
+        <div class="editor-middle">
+            <!-- Activity bar -->
+            <div class="activity-bar" aria-hidden="true">
+                <div class="activity-icon active" title="Explorer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 7h4l2-2h6l2 2h4M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7"/>
+                        <path d="M8 12h8M8 15h5"/>
+                    </svg>
+                </div>
+                <div class="activity-icon" title="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="10.5" cy="10.5" r="6"/>
+                        <path d="M15 15l5 5"/>
+                    </svg>
+                </div>
+                <div class="activity-icon" title="Source Control">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="6" r="2.5"/>
+                        <circle cx="7" cy="18" r="2.5"/>
+                        <circle cx="17" cy="18" r="2.5"/>
+                        <path d="M12 8.5v4.5M12 13l-5 2.5M12 13l5 2.5"/>
+                    </svg>
+                </div>
+                <div class="activity-icon" title="Settings">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Editor body -->
+            <div class="editor-body">
+                <!-- human.py tab -->
+                <div class="tab-content active" id="tab-human">
+                    <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span></div>
+                    <div class="code-area"><div class="code-pre">
 <div class="code-line" data-blame="@tnmygrwl  ·  Sep 2023  ·  switched from nn.Module"><span class="kw">from</span> transformers <span class="kw">import</span> <span class="cls">PreTrainedModel</span>, <span class="cls">PretrainedConfig</span></div>
 <div class="code-line"> </div>
 <div class="code-line"> </div>
@@ -79,12 +120,12 @@
 <div class="code-line" data-blame="@tnmygrwl  ·  Aug 7, 1998  ·  main event">    <span class="kw">def</span> <span class="fn">forward</span>(<span class="param">self</span>, <span class="param">x</span>):</div>
 <div class="code-line" data-blame="@tnmygrwl  ·  Aug 7, 1998  ·  pass-through for now">        <span class="kw">return</span> <span class="param">self</span>.backbone(<span class="param">x</span>)</div>
 </div></div>
-            </div>
+                </div>
 
-            <!-- links.py tab -->
-            <div class="tab-content" id="tab-links">
-                <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
-                <div class="code-area"><div class="code-pre">
+                <!-- links.py tab -->
+                <div class="tab-content" id="tab-links">
+                    <div class="line-numbers" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
+                    <div class="code-area"><div class="code-pre">
 <div class="code-line" data-blame="@tnmygrwl  ·  Mar 2026  ·  updated"><span class="cm"># where to find me</span></div>
 <div class="code-line"> </div>
 <div class="code-line" data-blame="@tnmygrwl  ·  Aug 7, 1998  ·  dict of dicts">links <span class="op">=</span> {</div>
@@ -93,6 +134,83 @@
 <div class="code-line" data-blame="@tnmygrwl  ·  Mar 2026  ·  updated">    <span class="str">"email"</span>: <a class="email-link" href="#"><span class="str">""</span>.<span class="fn">join</span>([<span class="str">"hey"</span>, <span class="builtin">chr</span>(<span class="num">64</span>), <span class="str">"tnmygrwl.com"</span>])</a>,</div>
 <div class="code-line" data-blame="@tnmygrwl  ·  Aug 7, 1998  ·  closed">}</div>
 </div></div>
+                </div>
+            </div>
+
+            <!-- Minimap -->
+            <div class="minimap" id="minimap" aria-hidden="true">
+                <div class="minimap-viewport"></div>
+                <div class="minimap-content" id="minimap-human">
+                    <!-- Line 1: from transformers import ... (keyword + class) -->
+                    <div class="mm-line" style="width:65%;background:var(--kw);"></div>
+                    <!-- Line 2-3: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 4: class HumanConfig -->
+                    <div class="mm-line" style="width:55%;background:var(--kw);"></div>
+                    <!-- Line 5: model_type = "human" -->
+                    <div class="mm-line" style="width:40%;background:var(--str);margin-left:8px;"></div>
+                    <!-- Line 6: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 7: def __init__ -->
+                    <div class="mm-line" style="width:30%;background:var(--fn);margin-left:8px;"></div>
+                    <!-- Lines 8-15: params -->
+                    <div class="mm-line" style="width:20%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:45%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:58%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:48%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:62%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:38%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:60%;background:var(--str);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:28%;background:var(--param);margin-left:16px;"></div>
+                    <!-- Line 16: ): -->
+                    <div class="mm-line" style="width:10%;background:var(--op);margin-left:8px;"></div>
+                    <!-- Lines 17-23: self assignments -->
+                    <div class="mm-line" style="width:42%;background:var(--fn);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:30%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:35%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:28%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:32%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:30%;background:var(--param);margin-left:16px;"></div>
+                    <div class="mm-line" style="width:30%;background:var(--param);margin-left:16px;"></div>
+                    <!-- Lines 24-25: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 26: class Human -->
+                    <div class="mm-line" style="width:48%;background:var(--kw);"></div>
+                    <!-- Line 27: config_class -->
+                    <div class="mm-line" style="width:38%;background:var(--cls);margin-left:8px;"></div>
+                    <!-- Line 28: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 29: def __init__ -->
+                    <div class="mm-line" style="width:42%;background:var(--fn);margin-left:8px;"></div>
+                    <!-- Line 30: super().__init__ -->
+                    <div class="mm-line" style="width:38%;background:var(--fn);margin-left:16px;"></div>
+                    <!-- Line 31: self.backbone = nn.Identity()  # comment -->
+                    <div class="mm-line" style="width:55%;background:var(--cm);margin-left:16px;"></div>
+                    <!-- Line 32: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 33: def forward -->
+                    <div class="mm-line" style="width:35%;background:var(--fn);margin-left:8px;"></div>
+                    <!-- Line 34: return -->
+                    <div class="mm-line" style="width:40%;background:var(--kw);margin-left:16px;"></div>
+                </div>
+                <div class="minimap-content" id="minimap-links" style="display:none;">
+                    <!-- Line 1: # where to find me -->
+                    <div class="mm-line" style="width:50%;background:var(--cm);"></div>
+                    <!-- Line 2: blank -->
+                    <div class="mm-line mm-blank"></div>
+                    <!-- Line 3: links = { -->
+                    <div class="mm-line" style="width:25%;background:var(--op);"></div>
+                    <!-- Line 4: "github": ... -->
+                    <div class="mm-line" style="width:55%;background:var(--str);margin-left:8px;"></div>
+                    <!-- Line 5: "linkedin": ... -->
+                    <div class="mm-line" style="width:58%;background:var(--str);margin-left:8px;"></div>
+                    <!-- Line 6: "email": ... -->
+                    <div class="mm-line" style="width:52%;background:var(--str);margin-left:8px;"></div>
+                    <!-- Line 7: } -->
+                    <div class="mm-line" style="width:5%;background:var(--op);"></div>
+                </div>
             </div>
         </div>
 
@@ -134,7 +252,31 @@
         var contents = document.querySelectorAll('.tab-content');
         var titleText = document.getElementById('titlebar-filename');
         var statusCursor = document.getElementById('status-cursor');
+        var breadcrumbFile = document.getElementById('breadcrumb-file');
+        var minimapHuman = document.getElementById('minimap-human');
+        var minimapLinks = document.getElementById('minimap-links');
         var filenames = { human: 'human.py', links: 'links.py' };
+
+        function clearActiveLineNumbers() {
+            document.querySelectorAll('.line-numbers span.active').forEach(function(s) {
+                s.classList.remove('active');
+            });
+        }
+
+        function setActiveLineNumber(codeLine) {
+            clearActiveLineNumbers();
+            var codeLines = codeLine.parentNode.children;
+            var idx = Array.from(codeLines).indexOf(codeLine);
+            // find the corresponding tab-content, then its line-numbers
+            var tabContent = codeLine.closest('.tab-content');
+            if (tabContent) {
+                var lineNums = tabContent.querySelector('.line-numbers');
+                if (lineNums) {
+                    var spans = lineNums.querySelectorAll('span');
+                    if (spans[idx]) spans[idx].classList.add('active');
+                }
+            }
+        }
 
         // tab switching
         tabs.forEach(function(tab) {
@@ -145,6 +287,20 @@
                 this.classList.add('active');
                 document.getElementById('tab-' + target).classList.add('active');
                 titleText.textContent = 'tanmay agrawal - ' + filenames[target];
+                // update breadcrumb
+                breadcrumbFile.textContent = filenames[target];
+                // update minimap
+                if (target === 'human') {
+                    minimapHuman.style.display = '';
+                    minimapLinks.style.display = 'none';
+                } else {
+                    minimapHuman.style.display = 'none';
+                    minimapLinks.style.display = '';
+                }
+                // clear active states
+                clearActiveLineNumbers();
+                document.querySelectorAll('.code-line').forEach(function(l) { l.classList.remove('active'); });
+                statusCursor.textContent = 'Ln 1, Col 1';
             });
         });
 
@@ -153,9 +309,10 @@
             line.addEventListener('click', function(e) {
                 var wasActive = this.classList.contains('active');
                 document.querySelectorAll('.code-line').forEach(function(l) { l.classList.remove('active'); });
+                clearActiveLineNumbers();
                 if (!wasActive) {
                     this.classList.add('active');
-                    // find line number by counting preceding siblings
+                    setActiveLineNumber(this);
                     var ln = Array.from(this.parentNode.children).indexOf(this) + 1;
                     statusCursor.textContent = 'Ln ' + ln + ', Col 1';
                 } else {
@@ -167,6 +324,7 @@
 
         document.querySelector('.editor-body').addEventListener('click', function() {
             document.querySelectorAll('.code-line').forEach(function(l) { l.classList.remove('active'); });
+            clearActiveLineNumbers();
             statusCursor.textContent = 'Ln 1, Col 1';
         });
 

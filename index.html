@@ -88,8 +88,8 @@
 
 links <span class="op">=</span> {
     <span class="str">"github"</span>: <span class="str">"<a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github.com/tnmygrwl</a>"</span>,
-    <span class="str">"linkedin"</span>: <span class="str">"<a href="https://linkedin.com/in/tanmay7270" target="_blank" rel="noopener noreferrer">linkedin.com/in/tanmay7270</a>"</span>,
-    <span class="str">"email"</span>: <span class="str">"<a href="mailto:tanmayagrawal@umass.edu" target="_blank" rel="noopener noreferrer">tanmayagrawal@umass.edu</a>"</span>,
+    <span class="str">"linkedin"</span>: <span class="str">"<a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin.com/in/tnmygrwl</a>"</span>,
+    <span class="str">"email"</span>: <a class="email-link" href="#"><span class="str">""</span>.<span class="fn">join</span>([<span class="str">"hey"</span>, <span class="builtin">chr</span>(<span class="num">64</span>), <span class="str">"tnmygrwl.com"</span>])</a>,
 }</code></pre></div>
             </div>
         </div>
@@ -108,8 +108,8 @@ links <span class="op">=</span> {
             </div>
             <div class="terminal-links">
                 <a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github</a>
-                <a href="https://linkedin.com/in/tanmay7270" target="_blank" rel="noopener noreferrer">linkedin</a>
-                <a href="mailto:tanmayagrawal@umass.edu" target="_blank" rel="noopener noreferrer">email</a>
+                <a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin</a>
+                <a class="email-link" href="#">email</a>
             </div>
         </div>
 
@@ -126,7 +126,6 @@ links <span class="op">=</span> {
         </div>
     </div>
 
-    <!-- Tab switching JS -->
     <script>
     (function() {
         var tabs = document.querySelectorAll('.tab-btn');
@@ -146,6 +145,12 @@ links <span class="op">=</span> {
                 document.getElementById('tab-' + target).classList.add('active');
                 titleText.textContent = 'tanmay agrawal - ' + filenames[target];
             });
+        });
+
+        // construct email at runtime — no mailto: in source for crawlers
+        var e = ['hey', String.fromCharCode(64), 'tnmygrwl.com'].join('');
+        document.querySelectorAll('.email-link').forEach(function(a) {
+            a.href = 'mailto:' + e;
         });
     })();
     </script>

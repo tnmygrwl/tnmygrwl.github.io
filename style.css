@@ -190,6 +190,7 @@ html, body {
 .op { color: var(--op); }
 .param { color: var(--param); }
 .builtin { color: var(--builtin); }
+.num { color: #b5cea8; }
 
 /* Links styled as strings */
 .code-area a {

@@ -107,9 +107,9 @@ links <span class="op">=</span> {
                 <span class="terminal-cmd"> human-cli --links</span>
             </div>
             <div class="terminal-links">
-                <a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github</a>
-                <a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin</a>
-                <a class="email-link" href="#">email</a>
+                <a href="https://github.com/tnmygrwl" target="_blank" rel="noopener noreferrer">github.com/tnmygrwl</a>
+                <a href="https://linkedin.com/in/tnmygrwl" target="_blank" rel="noopener noreferrer">linkedin.com/in/tnmygrwl</a>
+                <a class="email-link" href="#"></a>
             </div>
         </div>
 
@@ -151,6 +151,7 @@ links <span class="op">=</span> {
         var e = ['hey', String.fromCharCode(64), 'tnmygrwl.com'].join('');
         document.querySelectorAll('.email-link').forEach(function(a) {
             a.href = 'mailto:' + e;
+            if (!a.textContent.trim()) a.textContent = e;
         });
     })();
     </script>
